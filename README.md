@@ -25,7 +25,3 @@ Este repositorio se utiliza como fuente de datos en un notebook de Google Colab.
 ## Objetivo 🎯
 
 El principal objetivo de este repositorio es proporcionar una estructura clara y comprensible de los datos capturados durante la investigación, permitiendo un análisis detallado de los ataques de deauth en redes WLAN.
-
-## Contribución 🤝
-
-Las contribuciones, correcciones o sugerencias son bienvenidas. Por favor, abre un issue o pull request para colaborar.
